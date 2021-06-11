@@ -1,2 +1,3 @@
-export * from './axiosConfig';
 export * from './apis';
+export * from './types';
+export * from './AxiosConfig';

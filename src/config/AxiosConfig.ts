@@ -5,10 +5,9 @@ import axios, {
   AxiosResponse,
 } from 'axios';
 
-export const instanceApiService: AxiosInstance = axios.create({
-  baseURL: 'localhost:3000',
-  timeout: 10000,
-});
+import {ApiConfigs} from './apis';
+
+export const instanceApiService: AxiosInstance = axios.create(ApiConfigs);
 
 instanceApiService.interceptors.request.use(function (config) {
   axios.defaults.headers.common.Authorization = '';

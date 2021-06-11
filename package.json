@@ -1,7 +1,10 @@
 {
   "name": "rnbase",
   "version": "0.0.1",
-  "private": true,
+  "description": "React Native Template",
+  "repository": "https://github.com/longb1997/RNBase.git",
+  "author": "Royce Chua",
+  "license": "MIT",
   "scripts": {
     "android": "cd android &&./gradlew clean && cd .. && npx react-native run-android ",
     "ios": "cd ios && xcodebuild clean && cd .. && npx react-native run-ios",

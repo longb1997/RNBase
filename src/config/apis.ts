@@ -1,5 +1,5 @@
 export const ApiConfigs = {
-  baseURL: 'localhost:3000',
+  baseURL: 'https://jsonplaceholder.typicode.com',
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json',
@@ -16,7 +16,9 @@ export const API_URL = {
     REFRESH_TOKEN: '/api/token-auth/refresh-token',
     LOGOUT: '/api​/token-auth​/log-out',
   },
-  APP: {},
+  APP: {
+    GET_POST: '/posts/1',
+  },
 };
 
 export const API_CODE = {

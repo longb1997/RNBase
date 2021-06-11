@@ -6,14 +6,19 @@ import * as Yup from 'yup';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {APP_SCREEN, NavigationService} from '@navigations';
+import {connect} from 'react-redux';
+
+import {actions} from './redux/reducer';
 
 const validate = Yup.object().shape({
   email: Yup.string().required('Email field is required'),
   password: Yup.string().required('Password field is required'),
 });
-export const Login = () => {
+const Screen = (props: any) => {
+  const {onLogin} = props;
+  console.log('🚀 ~ file: Login.tsx ~ line 19 ~ Screen ~ onLogin', onLogin);
   const onSignin = (values: any) => {
-    console.log('🚀 ~ file: Login.tsx ~ line 16 ~ onSignin ~ values', values);
+    onLogin();
     NavigationService.navigate(APP_SCREEN.REGISTER);
   };
   return (
@@ -62,3 +67,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+const mapDispatch = {
+  onLogin: actions.onLogin,
+};
+export const Login = connect(null, mapDispatch)(Screen);

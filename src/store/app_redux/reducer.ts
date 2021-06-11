@@ -3,7 +3,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {AppState} from './type';
 export enum SLICE_NAME {
   APP = 'APP',
-  LOGIN = 'LOGIN',
+  AUTH = 'AUTH',
 }
 
 const initialAppState: AppState = {

@@ -21,7 +21,7 @@ module.exports = {
           '@networking': './src/library/networking',
           '@utils': './src/library/utils',
           '@navigations': './src/navigation',
-          '@service': './src/service',
+          '@services': './src/services',
           '@store': './src/store',
         },
       },
