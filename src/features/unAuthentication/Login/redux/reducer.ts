@@ -26,7 +26,6 @@ const loginSlice = createSlice({
   },
 });
 const onLogin = createAction(Action.LOGIN, (data: any) => {
-  console.log('🚀 ~ file: reducer.ts ~ line 29 ~ onLogin ~ data', data);
   return {
     payload: data,
   };
